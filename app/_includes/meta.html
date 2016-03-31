@@ -2,7 +2,7 @@
 {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
 {% capture sharetitle %}{% if page.sharetitle %}{{ page.sharetitle }}{% else %}{% if site.sharetitle %}{{ site.sharetitle }}{% else %}{{ title }}{% endif %}{% endif %}{% endcapture %}
 {% capture sharedescription %}{% if page.sharedescription %}{{ page.sharedescription }}{% else %}{% if site.sharedescription %}{{ site.sharedescription }}{% else %}{{ description }}{% endif %}{% endif %}{% endcapture %}
-{% capture twittertext %}{% if page.twittertext %}{{ page.twittertext }}{% else %}{% if site.twittertext %}{{ site.twittertext }}{% else %}{{ sharetitle }}—{{ sharedescription }}{% endif %}{% endif %} {{ site.url }}{% endcapture %}
+{% capture twittertext %}{% if page.twittertext %}{{ page.twittertext }}{% else %}{% if site.twittertext %}{{ site.twittertext }}{% else %}{{ sharetitle }}—{{ sharedescription }}{% endif %}{% endif %}{% endcapture %}
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width,initial-scale=1">

@@ -1,0 +1,9 @@
+- name: Private Internet Access
+  image: /images/coalition/pia.png
+  url: https://www.privateinternetaccess.com/
+- name: ExpressVpn
+  image: /images/coalition/expressvpn.png
+  url: https://www.expressvpn.com/
+- name: Shuttleworth Foundation
+  image: /images/coalition/shuttleworth.png
+  url: https://www.shuttleworthfoundation.org/

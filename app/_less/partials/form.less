@@ -1,0 +1,178 @@
+.text-form-elements() {
+  appearance: none;
+  border: solid 1px @blue-400;
+  border-radius: 0.5rem;
+  display: block;
+  font-family: @body-font;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.button() {
+  .text-form-elements();
+  background-color: @blue-400;
+  box-shadow: 0 0.25em 0.75em fade(@blue-400, 42%);
+  border: none;
+  color: @white;
+  cursor: pointer;
+  font-family: @body-font;
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  padding: 0.583333333em 0;
+  position: relative;
+  text-transform: uppercase;
+  transition: background-color 300ms, bottom 100ms;
+
+  &:focus {
+    box-shadow: 0 0 3px 3px @blue-900;
+    outline: 0;
+    top: 1px;
+  }
+
+  &:hover {
+    background-color: darken(@blue-400, 10%);
+  }
+
+  &:active {
+    top: 2px;
+  }
+}
+
+::placeholder {
+  color: @black;
+  font-size: 1.7rem;
+}
+
+form {
+  align-items: center;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 4px 0 fade(@black, 16%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 74rem;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0.5rem 2rem 0;
+  position: relative;
+  transition: height 400ms;
+
+  &.removed {
+    height: 0;
+  }
+}
+
+[type="text"],
+[type="email"],
+textarea {
+  .text-form-elements();
+  transition: height .3s ease-in;
+  &:focus {
+    outline: none;
+    border-color: #000;
+    box-shadow: 0 0 0 3px @blue-400;
+  }
+  &.focused {
+    @media screen and (min-width: @large-phone) {
+      height: 250px;
+    }
+  }
+}
+textarea {
+  height: 120px;
+}
+
+[type="submit"] {
+  .button();
+}
+
+#form-email {
+  @media screen and (min-width: @large-phone) {
+    width: 41%;
+  }
+}
+
+#form-first_name {
+  width: 65%;
+  @media screen and (min-width: @large-phone) {
+    width: 33.5%;
+  }
+}
+
+#form-zip_code {
+  width: 32%;
+  @media screen and (min-width: @large-phone) {
+    width: 21%;
+  }
+}
+
+[for="select-country"] {
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-style: italic;
+  height: auto;
+  margin: 0 0.6rem 0.7rem 0;
+  text-align: right;
+  width: 100%;
+
+  &:hover, &:active, &:focus {
+    text-decoration: underline;
+  }
+
+  &.hidden {
+    height: 0;
+    margin: 0;
+  }
+}
+
+select {
+  display: none;
+  margin: 1.5rem auto;
+  max-width: 91%;
+
+  &.visible {
+    display: block;
+  }
+}
+
+.petition{
+  p.disclaimer {
+    color: lighten(@blue-900, 20%);
+    font-size: 80%;
+    margin-top: 1rem;
+    width: 100%;
+
+    a {
+      color: lighten(@blue-900, 40%);
+      font-weight: 600;
+    }
+
+    br {
+      display: none;
+
+      @media screen and (min-width: @small-phone) {
+        display: block;
+      }
+    }
+  }
+}
+
+.submitted {
+  background-color: fade(@white, 85%);
+  bottom: 0;
+  content: ' ';
+  display: block;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  .fadeIn(500ms)
+}
+label {
+  padding: 0px 0px 5px 15px;
+}

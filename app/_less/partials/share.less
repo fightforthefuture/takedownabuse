@@ -1,0 +1,54 @@
+ul.share {
+    text-align: center;
+    /* font-size: .000001px; */
+    padding-bottom: 4rem;
+    padding-left: 0px;
+    z-index: 9001;
+    transition: opacity 1s linear;
+    opacity: 0;
+
+    &.visible {
+      opacity: 1;
+    }
+
+    li {
+        display: inline-block;
+        margin: 10px;
+    }
+    button {
+        display: inline-block;
+        width: @share-button-size;
+        height: @share-button-size;
+        border: 0px;
+        font-size: 0px;
+        color: rgba(0, 0, 0, 0);
+        cursor: pointer;
+
+        &.facebook {
+            background: url(../images/facebook.png);
+            background-size: @share-button-size @share-button-size;
+        }
+        &.google {
+            background: url(../images/google.png);
+            background-size: @share-button-size @share-button-size;
+        }
+        &.twitter {
+            background: url(../images/twitter.png);
+            background-size: @share-button-size @share-button-size;
+        }
+    }
+
+    @media screen and (min-width: (@max-width-emphasis + 200)) {
+      &:not(.inline) {
+        position: fixed;
+        left: 0px;
+        top: 50%;
+        margin-top: -100px;
+
+        li {
+            margin: 15px 15px 15px 0px;
+            display: block;
+        }
+      }
+    }
+}

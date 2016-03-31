@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Digital7Mono';
+    src: url('../fonts/digital-7_mono-webfont.eot');
+    src: url('../fonts/digital-7_mono-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/digital-7_mono-webfont.woff') format('woff'),
+         url('../fonts/digital-7_mono-webfont.ttf') format('truetype'),
+         url('../fonts/digital-7_mono-webfont.svg#Digital7Mono') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.copy {
+    margin: 0 auto;
+    max-width: 72ch;
+}
+
+.inline {
+    display: inline;
+    margin: 0;
+    padding: 0;
+
+    li {
+        display: inline;
+    }
+}
+
+ul, ol {
+    &.piped {
+        li {
+            margin: 0;
+            padding: 0;
+            &::before {
+                content: '|\00a0';
+                display: inline-block;
+            }
+            &:first-child {
+                &::before {
+                    content: '';
+                    display: none;
+                }
+            }
+        }
+    }
+}

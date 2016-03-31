@@ -1,0 +1,51 @@
+#################################################
+# Config: Development                           #
+#################################################
+# (production settings go in _config.build.yml) #
+
+#############
+# Meta info #
+#############
+
+url: https://dmca.fail
+petitions_api: https://info.fightforthefuture.org
+timezone: America/New_York
+googleanalytics: UA-26576645-30
+
+################
+# Social Media #
+################
+
+name: Takedown the DMCA
+description: 'Haters and trolls can abuse the DMCA and erase stuff from the Internet. Here''s how we stop them (deadline: Friday)'
+sharetitle: 'Don’t let your tweets and videos get disappeared by takedown abuse.'
+sharedescription: 'Haters and trolls can abuse the DMCA and erase stuff from the Internet. Here''s how we stop them (deadline: Friday)'
+twittertext: 'Robots are erasing our stuff from the Internet. Here''s how we stop them (deadline: Friday) #takedownabuse #wtfu'
+
+author:
+  googleid: 102356128596404327231
+  twitterid: 382376904
+  twitter: fightfortheftr
+
+###########
+# Content #
+###########
+
+future: true
+show_drafts: true
+permalink: /:title/
+
+defaults:
+  - scope:
+      path: ''
+    values:
+      layout: default
+
+#############
+# Compiling #
+#############
+
+exclude: ['img']
+keep_files: ['img', 'js', 'css']
+
+markdown: kramdown

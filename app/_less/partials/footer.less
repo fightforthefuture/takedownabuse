@@ -1,0 +1,74 @@
+#fftf-footer {
+  background-color: @blue-800;
+  color: @white;
+  margin: 0;
+  padding: 4rem 2rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  a {
+    &:link, &:visited, &:hover, &:active, &:focus {
+      color: @white;
+      font-weight: 400;
+    }
+
+    &:link, &:visited {
+      text-decoration: none;
+    }
+  }
+
+  div {
+    text-align: left;
+  }
+
+  strong {
+    display: block;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: @large-phone) {
+    flex-direction: row;
+  }
+}
+
+.press-contact, .other-contact {
+  margin: 0 auto;
+  padding: 2rem;
+  a {
+    display: block;
+  }
+}
+
+.press-contact {
+  @media screen and (min-width: @large-phone) {
+    border-right: solid 2px #2c374f;
+    margin-right: 0;
+  }
+}
+
+.other-contact {
+  @media screen and (min-width: @large-phone) {
+    margin-left: 0;
+  }
+}
+
+.copyrightless {
+  border-top: solid 2px #2c374f;
+  margin-bottom: 1.2rem;
+  padding-top: 2rem;
+  width: 100%;
+}
+
+.footer-logo {
+  display: block;
+  margin: 2rem auto;
+  max-width: 90%;
+  width: 43rem;
+}

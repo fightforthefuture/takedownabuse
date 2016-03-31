@@ -1,0 +1,87 @@
+header {
+  align-items: center;
+  /*
+  background-image: url('/images/lock-bg.png');
+  background-repeat: no-repeat;
+  background-size: auto 50vh;
+  background-position: center 5vh;
+  */
+  padding: 5vh 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: flex-start;
+  width: 100vw;
+  .fadeIn(1000ms);
+
+  @media screen and (min-width: @large-phone) {
+    padding-top: 15vh;
+  }
+
+  @media (orientation: landscape) and (max-width: @large-phone) {
+    background-position: 9vw center;
+    background-size: auto 68%;
+    justify-content: center;
+    padding: 2rem 2rem 2rem 40vw;
+  }
+
+  h1 {
+    font-size: 5.25vh;
+    font-variant: small-caps;
+    letter-spacing: -2px;
+    margin: 2vh auto 0rem;
+    text-transform: lowercase;
+    color: @white;
+    font-weight: 500;
+
+    @media (orientation: landscape) and (max-width: @large-phone) {
+      font-size: 5.4rem;
+      margin: 6vw auto 1rem;
+    }
+  }
+
+  p {
+    font-size: 2.7rem;
+    line-height: 1.2;
+    max-width: 20ch;
+    text-align: center;
+
+    @media (orientation: landscape) and (max-width: @large-phone) {
+      margin-bottom: 2rem;
+    }
+  }
+  a {
+    color: @white;
+    text-decoration: none;
+    margin-top: 15vh;
+
+    @media screen and (min-width: @large-phone) {
+      margin-top: 20vh;
+    }
+
+    .arrow-down {
+      width: 4rem;
+
+      .st0 {
+        transition: fill 250ms;
+        fill: @white;
+      }
+
+      &:hover, &:active, &:focus {
+        .st0 {
+          fill: cyan;
+        }
+      }
+    }
+    &:hover {
+      color: cyan;
+
+      .arrow-down {
+        .st0 {
+          fill: cyan;
+        }
+      }
+    }
+    &:focus { outline: 0; }
+  }
+}

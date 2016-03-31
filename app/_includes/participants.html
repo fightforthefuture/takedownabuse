@@ -1,0 +1,22 @@
+{% capture participants %}
+
+## Who’s joining the protest?
+
+You can join as individuals or as a site/company.
+
+### Sites
+
+- [Site 1](http://example.com)
+- [Other Site](http://other.example.com)
+
+
+### People
+
+- [Aki Rose](http://akiro.se)
+- [Joan Q Public](https://twitter.com/JoanQPublic)
+- [Other Site](http://other.example.com)
+{% endcapture %}
+
+<article class="participants">
+  {{ participants | markdownify }}
+</article>

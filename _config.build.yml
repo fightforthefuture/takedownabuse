@@ -1,0 +1,8 @@
+######################
+# Config: Production #
+######################
+
+future: false
+show_drafts: false
+production: true
+petitions_api: https://info.fightforthefuture.org

@@ -183,6 +183,11 @@ window.components.forms = function (doc, win) {
     }.bind(this);
     xhr.open("post", 'https://queue.fightforthefuture.org/stuff_regulations_gov', true);
     xhr.send(data);
+
+    if (typeof ga !== 'undefined' && typeof window.VARIATION !== 'undefined') {
+      console.log('event', 'form', 'convert', window.VARIATION);
+      ga('send', 'event', 'form', 'convert', window.VARIATION);
+    }
   }
 
   function addEventListeners() {

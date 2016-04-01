@@ -49,8 +49,10 @@ function googlePlus() {
     }
   };
 
-  listenerFn();
-  window.addEventListener('scroll', listenerFn);
+  if (typeof window.VARIATION === 'undefined' || window.VARIATION == 'splash') {
+    listenerFn();
+    window.addEventListener('scroll', listenerFn);
+  }
 
   doc.querySelector('[href="#save-fair-use"]').addEventListener('click', function (e){
     e.preventDefault();
@@ -65,12 +67,6 @@ function googlePlus() {
             googlePlus();
         }, false);
     }
-
-  if (window.location.href.indexOf('ALWAYS_SHOW_SC_BANNER') !== -1) {
-    var script = document.createElement('script');
-    script.src = '/banner.js';
-    document.head.appendChild(script);
-  }
 
   // COUNTDOWN TO FUN
 

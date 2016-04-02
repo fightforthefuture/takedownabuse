@@ -166,7 +166,6 @@ window.components.forms = function (doc, win) {
     commitmentStatus.addEventListener('load', loadSignatureResponse);
     commitmentStatus.send(compilePayload());
 
-    /*
     var data = new FormData();
     data.append('name', doc.getElementById('form-first_name').value);
     data.append('comment', doc.getElementById('form-comments').value);
@@ -184,7 +183,6 @@ window.components.forms = function (doc, win) {
     }.bind(this);
     xhr.open("post", 'https://queue.fightforthefuture.org/stuff_regulations_gov', true);
     xhr.send(data);
-    */
 
     if (typeof ga !== 'undefined' && typeof window.VARIATION !== 'undefined') {
       console.log('event', 'form', 'convert', window.VARIATION);

@@ -134,7 +134,7 @@ window.components.forms = function (doc, win) {
 
       var
         petitionFormData = {
-          identifier: '59a1bb6c-c69e-4e76-bffc-00ca3252d515',
+          identifier: '121c68a5-d364-424e-aff6-909f422d0932',
           website: win.location.origin,
           tags: JSON.parse(doc.querySelector('[name="subscription[tag_list]"]').value),
           noOptIn: false,
@@ -166,6 +166,7 @@ window.components.forms = function (doc, win) {
     commitmentStatus.addEventListener('load', loadSignatureResponse);
     commitmentStatus.send(compilePayload());
 
+    /*
     var data = new FormData();
     data.append('name', doc.getElementById('form-first_name').value);
     data.append('comment', doc.getElementById('form-comments').value);
@@ -183,6 +184,7 @@ window.components.forms = function (doc, win) {
     }.bind(this);
     xhr.open("post", 'https://queue.fightforthefuture.org/stuff_regulations_gov', true);
     xhr.send(data);
+    */
 
     if (typeof ga !== 'undefined' && typeof window.VARIATION !== 'undefined') {
       console.log('event', 'form', 'convert', window.VARIATION);

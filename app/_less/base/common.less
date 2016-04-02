@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-  background: @dark-blue;
+  background: @white;
   color: @black;
   font-family: @body-font;
   font-size: 1.6rem;
@@ -37,17 +37,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-  font-size: 3.2rem;
+  max-width: 30ch;
+  font-size: 2.2rem;
   font-weight: 400;
   line-height: 1;
   margin-bottom: 0.6em;
 
   @media screen and (min-width: @small-phone) {
-    font-size: 4.2rem;
+    font-size: 3.2rem;
   }
 
   @media screen and (min-width: @large-phone) {
-    font-size: 5.2rem;
+    font-size: 4.2rem;
   }
 }
 

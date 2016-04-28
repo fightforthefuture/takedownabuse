@@ -17,13 +17,21 @@ body {
 }
 
 article {
-  margin: 3rem auto 12rem;
+  margin: 7rem auto 7rem;
   opacity: 0;
   padding: 0 2rem;
   .fadeIn(1000ms, 800ms);
 
   @media screen and (min-width: @small-phone) {
     padding: 0 3rem;
+  }
+
+  &.dark {
+    margin: 0rem;
+    padding: 7rem 2rem;
+    background: #222a3c;
+    color: white;
+    font-size: 1.1em;
   }
 }
 

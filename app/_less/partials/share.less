@@ -25,15 +25,15 @@ ul.share {
         cursor: pointer;
 
         &.facebook {
-            background: url(../images/facebook.png);
+            background: url(/images/facebook.png);
             background-size: @share-button-size @share-button-size;
         }
         &.google {
-            background: url(../images/google.png);
+            background: url(/images/google.png);
             background-size: @share-button-size @share-button-size;
         }
         &.twitter {
-            background: url(../images/twitter.png);
+            background: url(/images/twitter.png);
             background-size: @share-button-size @share-button-size;
         }
     }
@@ -51,4 +51,9 @@ ul.share {
         }
       }
     }
+}
+body.story {
+  ul.share {
+    opacity: 1;
+  }
 }

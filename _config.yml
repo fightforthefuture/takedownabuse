@@ -41,6 +41,11 @@ defaults:
     values:
       layout: default
 
+collections:
+  stories:
+    output: true
+    permalink: /stories/:path/
+
 #############
 # Compiling #
 #############

@@ -8,6 +8,9 @@ function googlePlus() {
 (function (doc, win) {
   "use strict";
 
+  if (!document.getElementById('save-fair-use'))
+    return false;
+
   function triggerComponents() {
     win.components = win.components || {};
     var
@@ -154,5 +157,57 @@ function googlePlus() {
   };
 
   new Countdown();
+
+  if (storyUrls) {
+
+    var curIndex = Math.floor(Math.random() * storyUrls.length);
+
+    var loadStory = function(prev) {
+      if (!prev) {
+        curIndex++;
+        if (curIndex == storyUrls.length)
+          curIndex = 0;
+      } else {
+        curIndex--;
+        if (curIndex == -1)
+          curIndex = storyUrls.length - 1;
+      }
+
+      var xhr = new XMLHttpRequest();
+      var re = /\<\!\-\- BEGIN STORY \-\-\>(.|\n)*\<\!\-\- END STORY \-\-\>/mi
+
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+          var found = xhr.response.match(re);
+          doc.getElementById('story').innerHTML = found[0];
+          setTimeout(function() {
+            doc.getElementById('story').style.opacity = 1;
+          }, 50);
+        }
+      }.bind(this);
+      xhr.open("get", storyUrls[curIndex], true);
+      xhr.send();
+
+    }
+
+    loadStory();
+
+    var storyFade = function(e, prev) {
+      e.preventDefault();
+      win.smoothScroll(doc.getElementById('dmca-horror-stories'));
+      doc.getElementById('story').style.opacity = 0;
+      setTimeout(function() {
+        loadStory(prev);
+      }, 500);
+    }
+
+    doc.getElementById('story-next').addEventListener('click', function(e) {
+      storyFade(e, false);
+    });
+    doc.getElementById('story-prev').addEventListener('click', function(e) {
+      storyFade(e, true);
+    });
+
+  }
 
 })(document, window);

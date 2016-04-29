@@ -1,3 +1,6 @@
+body.story {
+  background: black;
+}
 article.stories {
   color: white;
   background: black url(/images/spooky2.jpg);
@@ -8,9 +11,38 @@ article.stories {
   padding: 6rem 2rem;
   font-weight: 600;
   -webkit-box-shadow: inset 0px 0px 20px 9px rgba(0,0,0,0.75);
--moz-box-shadow: inset 0px 0px 20px 9px rgba(0,0,0,0.75);
-box-shadow: inset 0px 0px 20px 9px rgba(0,0,0,0.75);
-margin-bottom: 0px;
+  -moz-box-shadow: inset 0px 0px 20px 9px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 0px 20px 9px rgba(0,0,0,0.75);
+  margin-bottom: 0px;
+  position: relative;
+
+  #story {
+    transition: opacity .5s linear;
+  }
+
+  p {
+    position: relative;
+  }
+  a.prev, a.next {
+    position: absolute;
+    text-decoration: none;
+    transform: scale(1,2);
+    top: 50px;
+    font-size: 60px;
+    transition: opacity .3s linear;
+    opacity: .5;
+    outline: 0;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+  a.prev {
+    left: -60px;
+  }
+  a.next {
+    right: -60px;
+  }
   a {
     color: white;
     font-weight: bold;
@@ -27,5 +59,24 @@ margin-bottom: 0px;
   }
   strong {
     font-weight: 700;
+  }
+  span.divider {
+    margin: 0rem 1rem;
+    @media screen and (max-width: @small-phone) {
+      opacity: 0;
+      display: block;
+      overflow: hidden;
+      width: 1px;
+      height: 1px;
+
+    }
+  }
+  @media screen and (max-width: @small-phone) {
+    margin-top: 0px;
+    padding-top: 3rem;
+  }
+  .embed {
+    margin: 0px auto;
+    max-width: 600px;
   }
 }

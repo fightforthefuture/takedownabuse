@@ -1,0 +1,83 @@
+<!doctype html>
+<html class="default-layout">
+<head>
+  {% capture title %}{% if page.title %}{{ page.title }}{% endif %}{% endcapture %}
+  {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+
+  <!-- *** social meta *** -->
+  <!-- facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="{{ site.url }}/images/horror_stories.png" />
+  <meta property="og:image:width" content="1144" />
+  <meta property="og:image:height" content="572" />
+  <meta property="og:site_name" content="Takedown Abuse" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <meta property="og:title" content="DMCA Horror Stories" />
+  <meta property="og:description" content="{{ description }}" />
+
+  <!-- twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="{{ site.author.twitter }}">
+  <meta name="twitter:title" content="DMCA Horror Stories">
+  <meta name="twitter:description" content="{{ description }}"/>
+  <meta name="twitter:image" content="{{ site.url }}/images/horror_stories.png">
+  <meta name="twitter:domain" content="{{ site.url | remove:'http://' | remove:'https://' }}">
+  <meta name="twitter:account_id" content="{{ site.author.twitterid }}" />
+  <meta name="twitter:text" content="{{ title }}" />
+
+  <!-- google -->
+  <meta itemprop="name" content="DMCA Horror Stories">
+  <meta itemprop="description" content="{{ description }}">
+  <meta itemprop="image" content="{{ site.url }}/images/horror_stories.png">
+  <link rel="publisher" href="https://plus.google.com/{{ site.author.googleid }}">
+  <!-- /*** social meta *** -->
+
+
+  <link rel="stylesheet" href="/css/core.css">
+  <link href="https://fonts.googleapis.com/css?family=Creepster" rel="stylesheet" type="text/css">
+</head>
+<body class="{{ page.class }} story">
+
+<div class="stickybar">
+  <span>
+    <h1>Don't let the Internet become a graveyard for Free Speech!</h1>
+    <a href="/#save-fair-use" class="action-button">Take Action Now</a>
+  </span>
+</div>
+
+<article class="stories">
+  <h2 id="dmca-horror-stories">DMCA Horror Stories</h2>
+  <!-- BEGIN STORY -->
+  {{ content }}
+  <!-- END STORY -->
+  {% if page.class != 'toc' %}
+  <p>
+    <strong>
+      <a href="/stories/toc">Read more stories</a>
+      <span class="divider">|</span>
+      <a href="https://docs.google.com/forms/d/18z4-YyRmhJvjm4U5htHVVcXM2wpE_IiidXfHH9Jn0JU/viewform" target="_blank">Submit your story!</a>
+    </strong>
+  </p>
+  {% endif %}
+</article>
+
+<article class="dark">
+  <h2 id="free-speech-graveyard">Takedown abuse has gone too far.</h2>
+  <p>
+    For years, huge companies like Sony, Disney, and Comcast have been abusing the Digital Millenium Copyright Act (DMCA) to take down enormous swaths of online content, using automated software that ignores Fair Use rights and frequently misidentifies music and videos as copyrighted. Despite the fact that the system is already weighted in their favor, these companies are arguing that the DMCA doesn’t go far enough to give them control over online content. It's time to fight back against takedown abuse!
+  </p>
+  <a href="/#save-fair-use" class="action-button">Take Action Now</a>
+</article>
+{% include share.html %}
+
+{% include footer.html %}
+{% include scripts.html %}
+</body>
+</html>

@@ -1,10 +1,10 @@
 ---
 layout: story
 featured: true
-title: 'DMCA Horror Stories: Justin Bieber vs. The Fassa'
+title: 'DMCA Horror Stories: Justin Bieber not a Belieber in Free Speech'
 description: 'Apparently Justin is not a belieber in free speech.'
 ---
-### Justin Bieber vs. The Fassa
+### Justin Bieber: not a Belieber in Free Speech
 
 _By [The Fassa](https://www.youtube.com/c/TheFassa)_
 

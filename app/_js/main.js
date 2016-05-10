@@ -74,7 +74,7 @@ function googlePlus() {
   // COUNTDOWN TO FUN
 
   function Countdown() {
-    this.date = new Date(Date.UTC(2016, 04, 18, 4, 00, 0)).getTime();
+    this.date = new Date(Date.UTC(2016, 04, 12, 14, 00, 0)).getTime();
     this.interval = null;
     this.requestAnimationFrame = this.requestAnimationFrame.bind(this);
     this.targets = {};

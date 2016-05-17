@@ -52,16 +52,20 @@ function googlePlus() {
     }
   };
 
+  /*
+  // JL HACK ~ disable countdown
   if (typeof window.VARIATION === 'undefined' || window.VARIATION == 'splash') {
     listenerFn();
     window.addEventListener('scroll', listenerFn);
   }
+
 
   doc.querySelector('[href="#save-fair-use"]').addEventListener('click', function (e){
     e.preventDefault();
 
     win.smoothScroll(doc.getElementById('save-fair-use'));
   });
+  */
 
   var gl = document.querySelectorAll('button.google');
     for (var i = 0; i < gl.length; i++) {
@@ -156,7 +160,7 @@ function googlePlus() {
     document.getElementById('remaining').textContent = str;
   };
 
-  new Countdown();
+  // new Countdown(); // JL HACK ~ disabled
 
   if (storyUrls) {
 

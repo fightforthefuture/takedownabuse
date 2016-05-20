@@ -1,5 +1,6 @@
 {% capture title %}{% if page.title %}{{ page.title }} |{% endif %}{{ site.name }}{% endcapture %}
 {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
+{% capture shareimage %}{% if page.shareimage %}{{ page.shareimage }}{% else %}{% if site.shareimage %}{{ site.shareimage }}{% else %}{{ site.url }}/images/unicorncat.jpg{% endif %}{% endif %}{% endcapture %}
 {% capture sharetitle %}{% if page.sharetitle %}{{ page.sharetitle }}{% else %}{% if site.sharetitle %}{{ site.sharetitle }}{% else %}{{ title }}{% endif %}{% endif %}{% endcapture %}
 {% capture sharedescription %}{% if page.sharedescription %}{{ page.sharedescription }}{% else %}{% if site.sharedescription %}{{ site.sharedescription }}{% else %}{{ description }}{% endif %}{% endif %}{% endcapture %}
 {% capture twittertext %}{% if page.twittertext %}{{ page.twittertext }}{% else %}{% if site.twittertext %}{{ site.twittertext }}{% else %}{{ sharetitle }}—{{ sharedescription }}{% endif %}{% endif %}{% endcapture %}
@@ -20,21 +21,21 @@
 <meta property="og:locale" content="en_US" />
 <meta property="og:locale:alternate" content="en_GB" />
 <meta property="og:title" content="{{ sharetitle }}" />
-<meta property="og:description" content="{{ description }}" />
+<meta property="og:description" content="{{ sharedescription }}" />
 
 <!-- twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="{{ site.author.twitter }}">
 <meta name="twitter:title" content="{{ sharetitle }}">
-<meta name="twitter:description" content="{{ description }}"/>
-<meta name="twitter:image" content="{{ site.url }}/images/unicorncat.jpg">
+<meta name="twitter:description" content="{{ sharedescription }}"/>
+<meta name="twitter:image" content="{{ shareimage }}">
 <meta name="twitter:domain" content="{{ site.url | remove:'http://' | remove:'https://' }}">
 <meta name="twitter:account_id" content="{{ site.author.twitterid }}" />
 <meta name="twitter:text" content="{{ twittertext }}" />
 
 <!-- google -->
 <meta itemprop="name" content="{{ sharetitle }}">
-<meta itemprop="description" content="{{ description }}">
+<meta itemprop="description" content="{{ sharedescription }}">
 <meta itemprop="image" content="{{ site.url }}/images/lock-bg.png">
 <link rel="publisher" href="https://plus.google.com/{{ site.author.googleid }}">
 <!-- /*** social meta *** -->

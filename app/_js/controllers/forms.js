@@ -142,13 +142,9 @@ window.components.forms = function (doc, win) {
       formData.append('org', 'fftf');
       formData.append('tag', window.location.pathname);
 
-      if (window.location.href.indexOf('familyguy') === -1)
-        formData.append('an_id', '09819cc1-a4ce-4ee2-bd29-693a674d712d');
-      else
-        formData.append('an_id', 'b89ce783-3fc3-4fe1-961c-aba52c6d7f4c');
-
-      formData.append('an_website', win.location.origin);
       formData.append('an_tags', JSON.stringify(tags));
+      formData.append('an_petition', commitmentForm.action.replace('/signatures', ''));
+
       formData.append('member[email]', doc.getElementById('form-email').value);
       formData.append('member[postcode]', doc.getElementById('form-zip_code').value);
       formData.append('member[country]', countrySelect.value);

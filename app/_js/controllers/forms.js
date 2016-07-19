@@ -18,7 +18,7 @@ window.components.forms = function (doc, win) {
     commitmentForm = doc.forms[0];
 
   submitted.classList.add('submitted');
-  submitted.innerHTML = '<h2>Hang on a tick&hellip;</h2><h3>&hellip;reticulating splines.</h3><div class="circle-spinner">&nbsp;</div>';
+  submitted.innerHTML = '<div class="circle-spinner">&nbsp;</div>';
 
   function focusComments() {
     formComments.className = 'focused';
